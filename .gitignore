@@ -1,0 +1,11 @@
+venv/
+node_modules/
+__pycache__/
+*.pyc
+backend/__pycache__/main.cpython-310.pyc
+frontend/dist/index.html
+frontend/dist/css/app.b6acd79e.css
+frontend/dist/js/app.62fc6915.js
+frontend/dist/js/app.62fc6915.js.map
+frontend/dist/js/chunk-vendors.7bd26587.js
+frontend/dist/js/chunk-vendors.7bd26587.js.map
