@@ -1,9 +1,9 @@
 from fastapi import FastAPI, File, UploadFile
+from authorization import auth
+from core import api
+
 
 app = FastAPI()
 
-@app.post("/uploadfile/")
-async def create_upload_file(file: UploadFile = File(...), order: int = 0, publish_time: str = None):
-    # Обработка загрузки файла и сохранение информации о посте
-    # в базе данных или другом хранилище
-    return {"filename": file.filename, "order": order, "publish_time": publish_time}
+app.include_router(auth.router, prefix='/auth', tags=['auth'])
+app.include_router(api.router, prefix='/api', tags=['api'])
